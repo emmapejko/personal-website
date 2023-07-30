@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server",
     "build": "webpack --config webpack.config.js --mode development --watch"
   },
@@ -23,10 +22,14 @@
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.0",
     "@babel/preset-react": "^7.16.0",
+    "@chakra-ui/react": "^2.8.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "babel-loader": "^8.2.3",
     "express": "^4.17.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "framer-motion": "^10.15.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "webpack": "^5.62.2",
     "webpack-cli": "^4.9.1"
   }
