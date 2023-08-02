@@ -10,6 +10,8 @@ import {
   Icon,
 } from '@chakra-ui/react'
 
+import NavBar from './NavBar.jsx'
+
 const Home = () => {
   return(
     <Container maxW={'7xl'}>
