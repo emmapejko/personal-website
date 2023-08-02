@@ -3,14 +3,10 @@ import {
   Container,
   Stack,
   Flex,
-  Box,
   Heading,
   Text,
-  Image,
   Icon,
 } from '@chakra-ui/react'
-
-import NavBar from './NavBar.jsx'
 
 const Home = () => {
   return(
@@ -24,61 +20,59 @@ const Home = () => {
           <Heading
             lineHeight={1.1}
             fontWeight={600}
-            fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
-            <Text
-              as={'span'}
-              position={'relative'}
-              _after={{
-                content: "''",
-                width: 'full',
-                height: '30%',
-                position: 'absolute',
-                bottom: 1,
-                left: 0,
-                bg: 'blue.200',
-                zIndex: -1,
-              }}>
-              Emma Pejko
-            </Text>
-            <br />
-            <Text as={'span'} color={'blue.200'}>
-              software developer
-            </Text>
+            fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}
+            align={'center'}
+            >
+            Emma Pejko
           </Heading>
         </Stack>
         <Flex
           flex={1}
           justify={'center'}
           align={'center'}
-          position={'relative'}
-          w={'full'}>
+          w={'full'}
+          >
           <Blob
             w={'150%'}
             h={'150%'}
             position={'absolute'}
-            top={'-20%'}
+            top={'-10%'}
             left={0}
             zIndex={-1}
-            color={'blue.50'}
+            color={'blue.100'}
           />
-          <Box
-            position={'relative'}
-            height={'300px'}
-            rounded={'sm'}
-            boxShadow={'2xl'}
-            width={'full'}
-            overflow={'hidden'}>
-            <Image
-              alt={'Hero Image'}
-              fit={'cover'}
-              align={'center'}
-              w={'100%'}
-              h={'100%'}
-              src={
-                'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80'
-              }
-            />
-          </Box>
+        </Flex>
+        <Flex
+          flex={1}
+          justify={'center'}
+          align={'center'}
+          w={'full'}
+          >
+          <Blob
+            w={'150%'}
+            h={'150%'}
+            position={'absolute'}
+            top={'30%'}
+            right={0}
+            zIndex={-1}
+            color={'blue.200'}
+          />
+        </Flex>
+        <Flex
+          flex={1}
+          justify={'center'}
+          align={'center'}
+          w={'full'}
+          >
+          <Blob
+            w={'150%'}
+            h={'150%'}
+            position={'absolute'}
+            top={'70%'}
+            left={0}
+            zIndex={-1}
+            color={'blue.300'}
+          />
         </Flex>
       </Stack>
     </Container>

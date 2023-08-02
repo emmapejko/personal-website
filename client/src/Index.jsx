@@ -12,6 +12,7 @@ import Home from './components/Home.jsx';
 import Experience from './components/Experience.jsx';
 import Projects from './components/Projects.jsx';
 import NavBar from './components/NavBar.jsx';
+import Contact from './components/Contact.jsx'
 
 const root = createRoot(document.getElementById('app'));
 
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: '/projects',
         element: <Projects />,
+      },
+      {
+        path: '/contact',
+        element: <Contact />,
       },
     ],
   },

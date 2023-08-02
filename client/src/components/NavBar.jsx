@@ -136,4 +136,8 @@ const NAV_ITEMS = [
     label: 'Projects',
     href: '/projects',
   },
+  {
+    label: 'Contact',
+    href: '/contact',
+  },
 ]
