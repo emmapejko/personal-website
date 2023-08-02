@@ -6,7 +6,6 @@ import {
   IconButton,
   Stack,
   Collapse,
-  Icon,
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
@@ -14,7 +13,6 @@ import {
 import {
   HamburgerIcon,
   CloseIcon,
-  ChevronDownIcon,
 } from '@chakra-ui/icons'
 import { Outlet, Link } from 'react-router-dom';
 
@@ -109,15 +107,12 @@ const MobileNav = () => {
   )
 }
 
-const MobileNavItem = ({ label, children, href }) => {
-  const { isOpen, onToggle } = useDisclosure()
-
+const MobileNavItem = ({ label, href }) => {
   return (
-    <Stack spacing={4} onClick={children && onToggle}>
+    <Stack spacing={4}>
+      <Link to={href}>
       <Box
         py={2}
-        as="a"
-        href={href ?? '#'}
         justifyContent="space-between"
         alignItems="center"
         _hover={{
@@ -126,33 +121,8 @@ const MobileNavItem = ({ label, children, href }) => {
         <Text fontWeight={600} color={useColorModeValue('gray.600', 'gray.200')}>
           {label}
         </Text>
-        {children && (
-          <Icon
-            as={ChevronDownIcon}
-            transition={'all .25s ease-in-out'}
-            transform={isOpen ? 'rotate(180deg)' : ''}
-            w={6}
-            h={6}
-          />
-        )}
       </Box>
-
-      <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
-        <Stack
-          mt={2}
-          pl={4}
-          borderLeft={1}
-          borderStyle={'solid'}
-          borderColor={useColorModeValue('gray.200', 'gray.700')}
-          align={'start'}>
-          {children &&
-            children.map((child) => (
-              <Box as="a" key={child.label} py={2} href={child.href}>
-                {child.label}
-              </Box>
-            ))}
-        </Stack>
-      </Collapse>
+      </Link>
     </Stack>
   )
 }
