@@ -8,11 +8,11 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import Home from './components/Home.jsx';
-import Experience from './components/Experience.jsx';
-import Projects from './components/Projects.jsx';
+import Home from './pages/Home.jsx';
+import Experience from './pages/Experience.jsx';
+import Projects from './pages/Projects.jsx';
+import Contact from './pages/Contact.jsx'
 import NavBar from './components/NavBar.jsx';
-import Contact from './components/Contact.jsx'
 
 const root = createRoot(document.getElementById('app'));
 
@@ -29,11 +29,11 @@ const router = createBrowserRouter([
         element: <Experience />,
       },
       {
-        path: '/projects',
+        path: 'projects',
         element: <Projects />,
       },
       {
-        path: '/contact',
+        path: 'contact',
         element: <Contact />,
       },
     ],
