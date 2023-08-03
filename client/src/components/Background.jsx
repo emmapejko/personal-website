@@ -1,31 +1,11 @@
 import React from 'react'
 import {
-  Container,
-  Stack,
-  Flex,
-  Heading,
-  Text,
   Icon,
 } from '@chakra-ui/react'
 
-const Home = () => {
+const Background = () => {
   return(
-    <Container>
-      <Stack
-        align={'center'}
-        spacing={{ base: 8, md: 10 }}
-        py={{ base: 20, md: 28 }}
-        direction={{ base: 'column', md: 'row' }}>
-        <Stack flex={1} spacing={{ base: 5, md: 10 }}>
-          <Heading
-            lineHeight={1.1}
-            fontWeight={600}
-            fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}
-            align={'center'}
-            >
-            Emma Pejko
-          </Heading>
-        </Stack>
+      <>
           <Blob
             w={'150%'}
             h={'150%'}
@@ -53,12 +33,11 @@ const Home = () => {
             zIndex={-1}
             color={'blue.300'}
           />
-      </Stack>
-    </Container>
+    </>
   )
 }
 
-export default Home;
+export default Background;
 
 const Blob = (props) => {
   return (
