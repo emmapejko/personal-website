@@ -10,7 +10,7 @@ import {
 
 const Home = () => {
   return(
-    <Container maxW={'7xl'}>
+    <Container>
       <Stack
         align={'center'}
         spacing={{ base: 8, md: 10 }}
@@ -26,54 +26,33 @@ const Home = () => {
             Emma Pejko
           </Heading>
         </Stack>
-        <Flex
-          flex={1}
-          justify={'center'}
-          align={'center'}
-          w={'full'}
-          >
           <Blob
             w={'150%'}
             h={'150%'}
-            position={'absolute'}
+            position={'fixed'}
             top={'-10%'}
             left={0}
             zIndex={-1}
             color={'blue.100'}
           />
-        </Flex>
-        <Flex
-          flex={1}
-          justify={'center'}
-          align={'center'}
-          w={'full'}
-          >
           <Blob
             w={'150%'}
             h={'150%'}
-            position={'absolute'}
-            top={'30%'}
+            position={'fixed'}
+            top={'20%'}
             right={0}
             zIndex={-1}
             color={'blue.200'}
           />
-        </Flex>
-        <Flex
-          flex={1}
-          justify={'center'}
-          align={'center'}
-          w={'full'}
-          >
           <Blob
             w={'150%'}
             h={'150%'}
-            position={'absolute'}
-            top={'70%'}
+            position={'fixed'}
+            top={'50%'}
             left={0}
             zIndex={-1}
             color={'blue.300'}
           />
-        </Flex>
       </Stack>
     </Container>
   )
