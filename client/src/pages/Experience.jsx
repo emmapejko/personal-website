@@ -3,6 +3,7 @@ import {
     Stack,
     Heading,
     Text,
+    SimpleGrid,
 } from '@chakra-ui/react'
 
 import Background from '../components/Background.jsx';
@@ -35,6 +36,19 @@ const Experience = () => {
                 <Education key={e.degree} {...e} />
             ))}
             </Stack>
+            <br />
+            <Heading
+                lineHeight={1.1}
+                fontWeight={600}
+                fontSize={{ base: 'l', sm: 'xl', lg: '2xl' }}
+                >
+                Technical Skills
+            </Heading>
+            <SimpleGrid columns={{sm: 2, md: 3}} spacing='8px'>
+                {TECH_SKILLS.map((e) => (
+                    <TechSkill key={e.skill} {...e} />
+                ))}
+            </SimpleGrid>
 
         <Background />
     </Stack>
@@ -84,6 +98,17 @@ const Education = ({ degree, school, accomplishments }) => {
                 </Text>
             ))}
       </>
+    )
+}
+
+const TechSkill = ({ skill }) => {
+    return (
+        <Text
+            fontSize={{ base: 'sm', sm: 'sm', lg: 'md' }}
+            paddingLeft={4}
+        >
+           • {skill}
+       </Text>
     )
 }
 
@@ -145,7 +170,7 @@ const WORK_ITEMS = [
     },
   ]
 
-  const EDUCATION_ITEMS = [
+const EDUCATION_ITEMS = [
     {
         degree: 'Bachelor of Science - Mathematics & Computer Science',
         school: 'Tulane University',
@@ -159,4 +184,26 @@ const WORK_ITEMS = [
         school: 'Operation Spark',
         accomplishments: []
     },
+]
+
+const TECH_SKILLS = [
+    {skill: 'JavaScript'},
+    {skill: 'Node.js'},
+    {skill: 'AWS'},
+    {skill: 'TypeScript'},
+    {skill: 'Express'},
+    {skill: 'GCP'},
+    {skill: 'Dart'},
+    {skill: 'Firebase'},
+    {skill: 'Git'},
+    {skill: 'Flutter'},
+    {skill: 'MySQL'},
+    {skill: 'Codemagic'},
+    {skill: 'React'},
+    {skill: 'PostgreSQL'},
+    {skill: 'Visual Studio Code'},
+    {skill: 'HTML5'},
+    {skill: 'MongoDB'},
+    {skill: 'Agile/Scrum'},
+    {skill: 'CSS'},
 ]
