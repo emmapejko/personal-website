@@ -50,7 +50,7 @@ const Projects = () => {
 
 export default Projects;
 
-const Project = ({ title, githubLink, webLink, appleLink, googleLink, description, subDescription, images }) => {
+const Project = ({ title, githubLink, webLink, appleLink, googleLink, description, subDescription, images, techStack }) => {
     return (
         <>  
             <HStack spacing='8px'>
@@ -86,6 +86,13 @@ const Project = ({ title, githubLink, webLink, appleLink, googleLink, descriptio
                         : <></>
                     }
             </HStack>
+            <Text
+                fontSize={{ base: 'xs', sm: 'xs', lg: 'sm' }}
+                paddingLeft={4}
+                as='i'
+            >
+                {techStack.join(', ')}
+            </Text>
             <Text
                 fontSize={{ base: 'sm', sm: 'sm', lg: 'md' }}
                 paddingLeft={4}
