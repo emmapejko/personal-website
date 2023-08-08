@@ -12,7 +12,7 @@ const Background = () => {
             position={'fixed'}
             top={'-10%'}
             left={0}
-            zIndex={-1}
+            zIndex={-2}
             color={'blue.100'}
           />
           <Blob
@@ -21,7 +21,7 @@ const Background = () => {
             position={'fixed'}
             top={'20%'}
             right={0}
-            zIndex={-1}
+            zIndex={-2}
             color={'blue.200'}
           />
           <Blob
@@ -30,7 +30,7 @@ const Background = () => {
             position={'fixed'}
             top={'50%'}
             left={0}
-            zIndex={-1}
+            zIndex={-2}
             color={'blue.300'}
           />
     </>
