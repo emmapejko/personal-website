@@ -6,8 +6,8 @@ import {
     SimpleGrid,
 } from '@chakra-ui/react'
 
-import Background from '../components/Background.jsx';
-import SectionHeading from '../components/SectionHeading.jsx';
+import Background from '../components/Background.jsx'
+import SectionHeading from '../components/SectionHeading.jsx'
 
 const Experience = () => {
   return (

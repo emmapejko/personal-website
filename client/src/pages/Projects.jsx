@@ -6,14 +6,15 @@ import {
     HStack,
     Divider,
     Box,
+    Link,
 } from '@chakra-ui/react'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LaunchIcon from '@mui/icons-material/Launch'
 import AppleIcon from '@mui/icons-material/Apple'
 import GoogleIcon from '@mui/icons-material/Google'
 
-import Background from '../components/Background.jsx';
-import SectionHeading from '../components/SectionHeading.jsx';
+import Background from '../components/Background.jsx'
+import SectionHeading from '../components/SectionHeading.jsx'
 
 const Projects = () => {
   return (
@@ -93,19 +94,27 @@ const Project = ({ title, githubLink, webLink, appleLink, googleLink, descriptio
 }
 
 const GitHubLink = ({ link }) => {
-    return <GitHubIcon onClick={() => window.open(link, "_blank")} style={{cursor: 'pointer'}}/>
+    return <Link href={link} isExternal>
+            <GitHubIcon />
+        </Link>
 }
 
 const WebsiteLink = ({ link }) => {
-    return <LaunchIcon onClick={() => window.open(link, "_blank")} style={{cursor: 'pointer'}}/>
+    return <Link href={link} isExternal>
+            <LaunchIcon />
+        </Link>
 }
 
 const AppleLink = ({ link }) => {
-    return <AppleIcon onClick={() => window.open(link, "_blank")} style={{cursor: 'pointer'}}/>
+    return <Link href={link} isExternal>
+            <AppleIcon />
+        </Link>
 }
 
 const GoogleLink = ({ link }) => {
-    return <GoogleIcon onClick={() => window.open(link, "_blank")} style={{cursor: 'pointer'}}/>
+    return <Link href={link} isExternal>
+            <GoogleIcon />
+        </Link>
 }
 
 const PERSONAL_PROJECTS = [

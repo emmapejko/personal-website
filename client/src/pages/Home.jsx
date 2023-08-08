@@ -2,7 +2,6 @@ import React from 'react'
 import {
   Stack,
   Heading,
-  Icon,
 } from '@chakra-ui/react'
 
 import Background from '../components/Background.jsx'
