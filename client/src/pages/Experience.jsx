@@ -7,48 +7,31 @@ import {
 } from '@chakra-ui/react'
 
 import Background from '../components/Background.jsx';
+import SectionHeading from '../components/SectionHeading.jsx';
 
 const Experience = () => {
   return (
     <Stack paddingLeft={10} paddingRight={10} paddingTop={4} paddingBottom={4}>
-            <Heading
-                lineHeight={1.1}
-                fontWeight={600}
-                fontSize={{ base: 'l', sm: 'xl', lg: '2xl' }}
-                >
-                Work
-            </Heading>
-            <Stack>
-            {WORK_ITEMS.map((e) => (
-                <WorkExperience key={e.accomplishments} {...e} />
+        <SectionHeading title={'Work'} />
+        <Stack>
+        {WORK_ITEMS.map((e) => (
+            <WorkExperience key={e.accomplishments} {...e} />
+        ))}
+        </Stack>
+        <br />
+        <SectionHeading title={'Education'} />
+        <Stack>
+        {EDUCATION_ITEMS.map((e) => (
+            <Education key={e.degree} {...e} />
+        ))}
+        </Stack>
+        <br />
+        <SectionHeading title={'Technical Skill'} />
+        <SimpleGrid columns={{sm: 2, md: 3}} spacing='8px'>
+            {TECH_SKILLS.map((e) => (
+                <TechSkill key={e.skill} {...e} />
             ))}
-            </Stack>
-            <br />
-            <Heading
-                lineHeight={1.1}
-                fontWeight={600}
-                fontSize={{ base: 'l', sm: 'xl', lg: '2xl' }}
-                >
-                Education
-            </Heading>
-            <Stack>
-            {EDUCATION_ITEMS.map((e) => (
-                <Education key={e.degree} {...e} />
-            ))}
-            </Stack>
-            <br />
-            <Heading
-                lineHeight={1.1}
-                fontWeight={600}
-                fontSize={{ base: 'l', sm: 'xl', lg: '2xl' }}
-                >
-                Technical Skills
-            </Heading>
-            <SimpleGrid columns={{sm: 2, md: 3}} spacing='8px'>
-                {TECH_SKILLS.map((e) => (
-                    <TechSkill key={e.skill} {...e} />
-                ))}
-            </SimpleGrid>
+        </SimpleGrid>
 
         <Background />
     </Stack>

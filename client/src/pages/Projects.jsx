@@ -13,30 +13,19 @@ import AppleIcon from '@mui/icons-material/Apple'
 import GoogleIcon from '@mui/icons-material/Google'
 
 import Background from '../components/Background.jsx';
+import SectionHeading from '../components/SectionHeading.jsx';
 
 const Projects = () => {
   return (
     <Stack paddingLeft={10} paddingRight={10} paddingTop={4} paddingBottom={4}>
-        <Heading
-            lineHeight={1.1}
-            fontWeight={600}
-            fontSize={{ base: 'l', sm: 'xl', lg: '2xl' }}
-            >
-            Personal
-        </Heading>
+        <SectionHeading title={'Personal'} />
         <Stack>
         {PERSONAL_PROJECTS.map((e) => (
             <Project key={e.title} {...e} />
         ))}
         </Stack>
         <br />
-        <Heading
-            lineHeight={1.1}
-            fontWeight={600}
-            fontSize={{ base: 'l', sm: 'xl', lg: '2xl' }}
-            >
-            Professional
-        </Heading>
+        <SectionHeading title={'Professional'} />
         <Stack>
         {PROFESSIONAL_PROJECTS.map((e) => (
             <Project key={e.title} {...e} />
@@ -52,7 +41,7 @@ export default Projects;
 
 const Project = ({ title, githubLink, webLink, appleLink, googleLink, description, subDescription, images, techStack }) => {
     return (
-        <>  
+        <>
             <HStack spacing='8px'>
                     <Heading
                     fontWeight={500}
