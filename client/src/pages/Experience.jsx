@@ -26,7 +26,7 @@ const Experience = () => {
         ))}
         </Stack>
         <br />
-        <SectionHeading title={'Technical Skill'} />
+        <SectionHeading title={'Technical Skills'} />
         <SimpleGrid columns={{sm: 2, md: 3}} spacing='8px'>
             {TECH_SKILLS.map((e) => (
                 <TechSkill key={e.skill} {...e} />
