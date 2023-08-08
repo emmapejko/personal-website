@@ -10,15 +10,15 @@ import Background from '../components/Background.jsx';
 
 const Experience = () => {
   return (
-    <Stack padding={4}>
+    <Stack paddingLeft={10} paddingRight={10} paddingTop={4} paddingBottom={4}>
             <Heading
                 lineHeight={1.1}
                 fontWeight={600}
                 fontSize={{ base: 'l', sm: 'xl', lg: '2xl' }}
                 >
-                Work Experience
+                Work
             </Heading>
-            <Stack paddingLeft={4}>
+            <Stack>
             {WORK_ITEMS.map((e) => (
                 <WorkExperience key={e.accomplishments} {...e} />
             ))}
@@ -31,7 +31,7 @@ const Experience = () => {
                 >
                 Education
             </Heading>
-            <Stack paddingLeft={4}>
+            <Stack>
             {EDUCATION_ITEMS.map((e) => (
                 <Education key={e.degree} {...e} />
             ))}
@@ -148,13 +148,6 @@ const WORK_ITEMS = [
         ]
     },
     {
-        title: 'Yoga Teacher',
-        company: 'Yoga With Carson Academy',
-        accomplishments: [
-            'RYT 200',
-        ]
-    },
-    {
         title: 'Research & Data Administrator',
         company: 'Levelset',
         accomplishments: [
@@ -183,6 +176,13 @@ const EDUCATION_ITEMS = [
         degree: 'IBC Fundamentals of Javascript, Functional Programming, & Web Development, Level 3',
         school: 'Operation Spark',
         accomplishments: []
+    },
+    {
+        degree: 'Yoga Teacher',
+        school: 'Yoga With Carson Academy',
+        accomplishments: [
+            'RYT 200'
+        ]
     },
 ]
 

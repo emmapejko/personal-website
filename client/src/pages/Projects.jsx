@@ -16,7 +16,7 @@ import Background from '../components/Background.jsx';
 
 const Projects = () => {
   return (
-    <Stack padding={4}>
+    <Stack paddingLeft={10} paddingRight={10} paddingTop={4} paddingBottom={4}>
         <Heading
             lineHeight={1.1}
             fontWeight={600}
@@ -24,7 +24,7 @@ const Projects = () => {
             >
             Personal
         </Heading>
-        <Stack paddingLeft={4}>
+        <Stack>
         {PERSONAL_PROJECTS.map((e) => (
             <Project key={e.title} {...e} />
         ))}
@@ -37,7 +37,7 @@ const Projects = () => {
             >
             Professional
         </Heading>
-        <Stack paddingLeft={4}>
+        <Stack>
         {PROFESSIONAL_PROJECTS.map((e) => (
             <Project key={e.title} {...e} />
         ))}
