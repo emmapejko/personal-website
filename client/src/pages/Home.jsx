@@ -3,6 +3,7 @@ import {
   Stack,
   Heading,
   Text,
+  Container,
 } from '@chakra-ui/react'
 
 import Background from '../components/Background.jsx'
@@ -23,12 +24,14 @@ const Home = () => {
             >
             Emma Pejko
           </Heading>
-          <Text
-            fontSize={{ base: 'md', sm: 'md', lg: 'lg' }}
-            align={'center'}
-          >
-             {'Hi there! I\'m a software developer based in San Diego, CA. I have professional experience developing multiple'}
-          </Text>
+          <Container maxWidth={{ sm: '90%', md: '80%', lg: '60%' }}>
+            <Text
+              fontSize={{ base: 'md', sm: 'md', lg: 'lg' }}
+              align={'center'}
+            >
+              {description}
+            </Text>
+          </Container>
         </Stack>
         <Background />
       </Stack>
@@ -37,4 +40,7 @@ const Home = () => {
 
 export default Home
 
-const description = ''
+const description =
+  'Hi there! I\'m a software developer based in San Diego, CA.\
+  I have professional experience developing iOS, Android, and web applications\
+  for a wide variety of clients. I\'m most excited about...'
