@@ -38,7 +38,7 @@ const Experience = () => {
   )
 }
 
-export default Experience;
+export default Experience
 
 const WorkExperience = ({ title, company, accomplishments }) => {
     return (

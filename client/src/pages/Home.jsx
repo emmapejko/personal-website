@@ -2,6 +2,7 @@ import React from 'react'
 import {
   Stack,
   Heading,
+  Text,
 } from '@chakra-ui/react'
 
 import Background from '../components/Background.jsx'
@@ -22,10 +23,18 @@ const Home = () => {
             >
             Emma Pejko
           </Heading>
+          <Text
+            fontSize={{ base: 'md', sm: 'md', lg: 'lg' }}
+            align={'center'}
+          >
+             {'Hi there! I\'m a software developer based in San Diego, CA. I have professional experience developing multiple'}
+          </Text>
         </Stack>
         <Background />
       </Stack>
   )
 }
 
-export default Home;
+export default Home
+
+const description = ''

@@ -37,7 +37,7 @@ const Background = () => {
   )
 }
 
-export default Background;
+export default Background
 
 const Blob = (props) => {
   return (

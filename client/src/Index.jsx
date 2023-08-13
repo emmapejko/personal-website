@@ -1,20 +1,20 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
+import React from 'react'
+import { createRoot } from 'react-dom/client'
 import {
   ChakraProvider
-} from '@chakra-ui/react';
+} from '@chakra-ui/react'
 import {
   createBrowserRouter,
   RouterProvider,
-} from "react-router-dom";
+} from "react-router-dom"
 
-import Home from './pages/Home.jsx';
-import Experience from './pages/Experience.jsx';
-import Projects from './pages/Projects.jsx';
+import Home from './pages/Home.jsx'
+import Experience from './pages/Experience.jsx'
+import Projects from './pages/Projects.jsx'
 import Contact from './pages/Contact.jsx'
-import NavBar from './components/NavBar.jsx';
+import NavBar from './components/NavBar.jsx'
 
-const root = createRoot(document.getElementById('app'));
+const root = createRoot(document.getElementById('app'))
 
 const router = createBrowserRouter([
   {
@@ -38,10 +38,10 @@ const router = createBrowserRouter([
       },
     ],
   },
-]);
+])
 
 root.render(
   <ChakraProvider>
     <RouterProvider router={router} />
   </ChakraProvider>
-);
+)
