@@ -16,7 +16,7 @@ const Contact = () => {
     <Stack paddingLeft={10} paddingRight={10} paddingTop={4} paddingBottom={4}>
         <Center>
         <HStack spacing={7}>
-          <Link href={'mailto:emma.pejko@email.com'} isExternal>
+          <Link href={'mailto:emma.pejko@gmail.com'} isExternal>
             <EmailIcon />
           </Link>
           <Link href={'https://www.linkedin.com/in/emma-pejko/'} isExternal>
@@ -32,4 +32,4 @@ const Contact = () => {
   )
 }
 
-export default Contact;
+export default Contact

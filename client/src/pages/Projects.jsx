@@ -38,7 +38,7 @@ const Projects = () => {
   )
 }
 
-export default Projects;
+export default Projects
 
 const Project = ({ title, githubLink, webLink, appleLink, googleLink, description, subDescription, images, techStack }) => {
     return (

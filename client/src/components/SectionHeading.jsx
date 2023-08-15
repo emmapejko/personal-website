@@ -31,4 +31,4 @@ const SectionHeading = ({ title }) => {
   )
 }
 
-export default SectionHeading;
+export default SectionHeading

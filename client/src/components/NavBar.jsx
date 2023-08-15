@@ -14,7 +14,7 @@ import {
   HamburgerIcon,
   CloseIcon,
 } from '@chakra-ui/icons'
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom'
 
 const NavBar = () => {
   const { isOpen, onToggle } = useDisclosure()
@@ -68,7 +68,7 @@ const NavBar = () => {
   )
 }
 
-export default NavBar;
+export default NavBar
 
 const DesktopNav = () => {
   const linkColor = useColorModeValue('gray.600', 'gray.200')
