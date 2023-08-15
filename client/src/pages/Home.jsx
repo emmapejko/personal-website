@@ -43,4 +43,4 @@ export default Home
 const description =
   'Hi there! I\'m a software developer based in San Diego, CA.\
   I have professional experience developing iOS, Android, and web applications\
-  for a wide variety of clients. I\'m most excited about...'
+  for a wide variety of clients.'
